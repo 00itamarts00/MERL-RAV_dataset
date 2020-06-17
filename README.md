@@ -91,3 +91,10 @@ Each of the ```testset``` and ```trainset``` in ```merl_rav_labels``` will have 
 eg. The image with name ```image03891.jpg``` has the labels ```image03891.pts```
 
 ### Format of the labellings
+
+<br/>
+***
+## Contact
+
+In case of any queries, feel free to drop an email to 
+```abhinav3663@gmail.com``` or ```tmarks@merl.com```
