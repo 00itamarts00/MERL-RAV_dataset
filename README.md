@@ -1,7 +1,7 @@
 # MERL-RAV Dataset
 MERL-RAV (MERL Reannotation of AFLW with Visibility) dataset contains over 19,000 face images in a full range of head poses. Each face is manually labeled with the ground-truth locations of 68 landmarks, with the additional information of whether each landmark is unoccluded, self-occluded (due to extreme head poses), or externally occluded.
 
-Please cite the following papers if you use this dataset in your research:
+Please cite the following paper if you use this dataset in your research:
 ```
 @inproceedings{kumar2020luvli,
   title={LUVLi Face Alignment: Estimating Landmarks' Location, Uncertainty, and Visibility Likelihood},
