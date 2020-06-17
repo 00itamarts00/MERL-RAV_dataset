@@ -9,14 +9,9 @@ Please cite the following papers if you use this dataset in your research:
   booktitle={CVPR},
   year={2020}
 }
-
-@inproceedings{kumar2019uglli,
-  title={UGLLI Face Alignment: Estimating Uncertainty with Gaussian Log-Likelihood Loss},
-  author={Kumar, Abhinav and Marks, Tim K and Mou, Wenxuan and Feng, Chen and Liu, Xiaoming},
-  booktitle={ICCV Workshops on Statistical Deep Learning in Computer Vision},
-  year={2019}
-}
 ```
+Please also consider citing the original [AFLW dataset](https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/aflw/)
+ as well.
 
 ### Instructions
 Download this repo and unzip it. Move to the project directory.
@@ -24,7 +19,7 @@ Download this repo and unzip it. Move to the project directory.
 cd $PROJECT_DIR
 ```
 
-Then, download the AFLW-19 dataset by sending out a mail to ```michael.opitz@icg.tugraz.at```. More details [here](https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/aflw/)
+Then, download the AFLW dataset by following the instructions [here](https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/aflw/)
 
 The directory should look like this
 ```bash
