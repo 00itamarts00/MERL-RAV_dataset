@@ -13,11 +13,12 @@ from common_functions import *
 IMAGE_EXTENSIONS                 = [".jpg"]
 LANDMARK_GROUND_TRUTH_EXTENSIONS = [".pts"]
 
-label_folder      = "merl_rav_labels"
-
-input_folder      = "../FaceAlignUncertainty/bigdata1/zt53/data/face/aflw"
-output_folder     = "aflw_ours_organized"
-
+#==============================================================================
+# Paths
+#==============================================================================
+input_folder      = "aflw"                # path to the aflw folder
+label_folder      = "merl_rav_labels"     # path to the merl_rav_labels
+output_folder     = "aflw_ours_organized" # path to the output folder
 
 # All sub_directories in the label folder
 sub_directories   = ["frontal", "left", "lefthalf", "right", "righthalf"]
