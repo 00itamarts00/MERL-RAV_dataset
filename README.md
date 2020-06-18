@@ -61,10 +61,10 @@ Next execute the following command
 python organize_merl_rav_using_aflw_and_our_labels.py
 ```
 
-The script goes through the sub-directories of the ```merl_rav_labels``` folder and then find the corresponding image from the ```aflw``` folder. It will then create a folder named ```aflw_ours_organized``` in the same directory. This folder will have the following directories
+The script goes through the sub-directories of the ```merl_rav_labels``` folder and then find the corresponding image from the ```aflw``` folder. It will then create a folder named ```merl_rav_organized``` in the same directory. This folder will have the following directories
 
 ```bash
- |--aflw_ours_organized
+ |--merl_rav_organized
  |        |-- frontal
  |        |      |--testset
  |        |      |--trainset
@@ -91,9 +91,35 @@ Each of the ```testset``` and ```trainset``` in ```merl_rav_labels``` will have 
 eg. The image with name ```image03891.jpg``` has the labels ```image03891.pts```
 
 ### Format of the labellings
+We follow the 68 point labelling scheme of the [300-W](https://ibug.doc.ic.ac.uk/resources/300-W/) and Multi-PIE dataset.
+
+As explained before, our labellings distinguish between three types of landmarks
+<ul>
+  <li> <b>Unoccluded</b> - 
+  Non-negative x and y coordinates
+  <li> <b>Externally occluded</b> - Negative x and y coordinates except -1. The location is given by absolute value of the coordinates. 
+  <li> <b>Self-Occluded</b> - Both x and y coordinates are -1
+</ul>  
+
+As an example, consider a small snippet of one of the labels file
+```bash
+version: 1
+n_points:  68
+{
+-1 -1
+-1 -1
+-1 -1
+-1443.5399999999997 -474.31999999999994
+-1420.0199999999998 -535.0799999999999
+-1388.6599999999996 -603.6799999999998
+1382.7799999999997 680.1199999999999
+1372.9799999999998 758.5199999999999
+...
+}
+```
+The ```n_points``` suggests that it uses a 68 point markup system. ```-1 -1``` in the first three rows after ```{``` shows that landmarks ```1,2,3``` are self-occluded landmarks.  The next three rows consist of negative coordinates and therefore landmarks ```4,5,6``` are externally occluded landmarks. Their true location is simply obtained by taking the absolute value of the given coordinates. The next two rows have non-negative coordinates and therefore landmarks ```7,8``` are unoccluded landmarks.
 
 <br/>
-***
 
 ## Contact
 
