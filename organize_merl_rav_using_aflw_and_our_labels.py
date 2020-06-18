@@ -18,7 +18,7 @@ LANDMARK_GROUND_TRUTH_EXTENSIONS = [".pts"]
 #==============================================================================
 input_folder      = "aflw"                # path to the aflw folder
 label_folder      = "merl_rav_labels"     # path to the merl_rav_labels
-output_folder     = "aflw_ours_organized" # path to the output folder
+output_folder     = "merl_rav_organized"  # path to the output folder
 
 # All sub_directories in the label folder
 sub_directories   = ["frontal", "left", "lefthalf", "right", "righthalf"]
