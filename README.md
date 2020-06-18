@@ -1,4 +1,6 @@
 # MERL-RAV Dataset
+<p align="center"><img src="sample.png" alt="Sample Image"></p>
+
 MERL-RAV (MERL Reannotation of AFLW with Visibility) dataset contains over 19,000 face images in a full range of head poses. Each face is manually labeled with the ground-truth locations of 68 landmarks, with the additional information of whether each landmark is unoccluded, self-occluded (due to extreme head poses), or externally occluded.
 
 Please cite the following paper if you use this dataset in your research:
@@ -21,7 +23,7 @@ cd $PROJECT_DIR
 
 Then, download the AFLW dataset by following the instructions [here](https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/aflw/)
 
-The directory should look like this
+The project directory should look like this
 ```bash
  |--merl_rav_labels
  |        |-- frontal
@@ -61,7 +63,7 @@ Next execute the following command
 python organize_merl_rav_using_aflw_and_our_labels.py
 ```
 
-The script goes through the sub-directories of the ```merl_rav_labels``` folder and then find the corresponding image from the ```aflw``` folder. It will then create a folder named ```merl_rav_organized``` in the same directory. This folder will have the following directories
+The script goes through the sub-folders of the ```merl_rav_labels``` folder and then find the corresponding image from the ```aflw``` folder. It will then create a folder named ```merl_rav_organized``` in the same project directory. This folder will have the following sub-folders
 
 ```bash
  |--merl_rav_organized
@@ -85,8 +87,12 @@ The script goes through the sub-directories of the ```merl_rav_labels``` folder 
  |               |--testset
  |               |--trainset
  |
+ |--merl_rav_labels
+ |--aflw
+ |--common_functions.py
+ |--organize_merl_rav_using_aflw_and_our_labels.py
 ```
-Each of the ```testset``` and ```trainset``` in ```merl_rav_labels``` will have the images as well as labels. The basename of the image and the ground truth labels are the same, they only differ in the name of the extension. The labels have pts extension while images have the jpg extension.
+Each of the ```testset``` and ```trainset``` sub-folders in ```merl_rav_organized``` folder will have the images as well as labels. The basename of the image and the ground truth labels are the same, they only differ in the name of the extension. The labels have pts extension while images have the jpg extension.
 
 eg. The image with name ```image03891.jpg``` has the labels ```image03891.pts```
 
@@ -94,6 +100,7 @@ eg. The image with name ```image03891.jpg``` has the labels ```image03891.pts```
 We follow the 68 point labelling scheme of the [300-W](https://ibug.doc.ic.ac.uk/resources/300-W/) and Multi-PIE dataset.
 
 As explained before, our labellings distinguish between three types of landmarks
+
 <ul>
   <li> <b>Unoccluded</b> - 
   Non-negative x and y coordinates
@@ -124,4 +131,4 @@ The ```n_points``` suggests that it uses a 68 point markup system. ```-1 -1``` i
 ## Contact
 
 In case of any queries, feel free to drop an email to 
-```abhinav3663@gmail.com``` or ```tmarks@merl.com```
+[Abhinav Kumar](https://sites.google.com/view/abhinavkumar/) (```abhinav3663@gmail.com```) or [Tim Marks](http://www.merl.com/people/tmarks) (```tmarks@merl.com```)
