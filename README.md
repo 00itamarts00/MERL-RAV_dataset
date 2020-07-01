@@ -4,7 +4,7 @@
 
 MERL-RAV (MERL Reannotation of AFLW with Visibility) dataset contains over 19,000 face images in a full range of head poses. Each face is manually labeled with the ground-truth locations of 68 landmarks, with the additional information of whether each landmark is unoccluded, self-occluded (due to extreme head poses), or externally occluded.
 
-Please cite the following paper if you use this dataset in your research:
+Please cite the following [CVPR paper](https://openaccess.thecvf.com/content_CVPR_2020/papers/Kumar_LUVLi_Face_Alignment_Estimating_Landmarks_Location_Uncertainty_and_Visibility_Likelihood_CVPR_2020_paper.pdf) if you use this dataset in your research:
 ```
 @inproceedings{kumar2020luvli,
   title={LUVLi Face Alignment: Estimating Landmarks' Location, Uncertainty, and Visibility Likelihood},
@@ -126,7 +126,7 @@ n_points:  68                                # <--- MERL-RAV uses a 68-landmark 
 ```
 
 ### Multiple Faces in a Single Image
-One image from the datasset could contain multiple faces. When that happens we used ```_1``` to index which of the faces in the image is being labeled. The image remains the same but the labels of two faces would be different.
+One image from the dataset can contain multiple faces. When that happens we use ```_1``` to index which of the faces in the image is being labeled. The image remains the same but the labels of two faces would be different.
 
 eg. ```merl_rav_labels/frontal/trainset/image20991_1.pts``` and  ```merl_rav_labels/frontal/trainset/image20991_2.pts``` are labels of two faces present in a single AFLW image ```image20991.jpg```. 
 
